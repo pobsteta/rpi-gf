@@ -12,7 +12,7 @@ services:
           - datavol:/var/lib/postgresql/data
         
     db:        
-        image: pobsteta/rpi-gf-db
+        image: pobsteta/rpi-db
         container_name: db
         volumes_from:
         - pgdata
@@ -25,7 +25,7 @@ services:
         restart: always
 
     sime:
-        image: pobsteta/rpi-gf-sime
+        image: pobsteta/rpi-sime
         container_name: sime
         depends_on:
         - db
